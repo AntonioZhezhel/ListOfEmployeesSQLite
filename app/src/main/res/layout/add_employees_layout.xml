@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/editTextEnterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"
+        android:textColorHint="#d0ced0"
+        android:textSize="12dp"
+        android:inputType="text"
+        android:background="@drawable/brown_border"
+        android:maxLines="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#000000"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextEnterAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter age "
+        android:textColorHint="#d0ced0"
+        android:layout_marginTop="24dp"
+        android:textSize="12dp"
+        android:inputType="number"
+        android:background="@drawable/brown_border"
+        android:maxLines="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#000000"
+        android:padding="12dp"/>
+    <EditText
+        android:id="@+id/editTextEnterGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter gender"
+        android:textColorHint="#d0ced0"
+        android:layout_marginTop="24dp"
+        android:textSize="12dp"
+        android:inputType="text"
+        android:background="@drawable/brown_border"
+        android:maxLines="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#000000"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextEnterPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/brown_border"
+        android:hint="Enter phone"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#d0ced0"
+        android:textSize="12dp" />
+
+</LinearLayout>
