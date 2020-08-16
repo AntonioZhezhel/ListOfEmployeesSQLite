@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <import type="com.example.listofemployeessqlite.persistence.EmployeesModel"/>
+    <variable
+        name="itemModel"
+        type="EmployeesModel" />
+</data>
+
+<androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="1dp"
-    card_view:cardElevation="2dp"
-    card_view:cardUseCompatPadding="true">
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp">
     <RelativeLayout
         android:id="@+id/relativeLayoutBackground"
         android:layout_width="match_parent"
@@ -32,38 +39,43 @@
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:textColor="#000000"
-            android:textSize="12dp"
+            android:textSize="15dp"
             android:textStyle="bold"
-            android:layout_toLeftOf="@+id/imageViewEditEmployees"
+            android:layout_toLeftOf="@+id/imageViewDeleteEmployees"
+            android:text='@{itemModel.name + "  ("+itemModel.gender+")"}'
             />
         <TextView
             android:id="@+id/textViewAge"
             android:layout_below="@+id/textViewName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageViewEditEmployees"
+            android:layout_toLeftOf="@+id/imageViewDeleteEmployees"
             android:layout_weight="4"
             android:textColor="#000000"
-            android:textSize="12dp"
-            android:textStyle="bold" />
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="@{itemModel.age}"
+            />
 
         <TextView
             android:id="@+id/textViewPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textViewAge"
-            android:layout_toLeftOf="@+id/imageViewEditEmployees"
+            android:layout_toLeftOf="@+id/imageViewDeleteEmployees"
             android:layout_weight="4"
             android:autoLink="phone"
             android:textColor="#000000"
-            android:textSize="12dp"
-            android:textStyle="bold" />
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text='@{itemModel.phone}'
+            />
         <ImageView
-            android:id="@+id/imageViewEditEmployees"
+            android:id="@+id/imageViewDeleteEmployees"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_edit"
+            android:src="@drawable/ic_delete"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
@@ -71,3 +83,4 @@
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+</layout>

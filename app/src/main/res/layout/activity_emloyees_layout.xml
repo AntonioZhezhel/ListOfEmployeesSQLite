@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context=".view.EmployeesLayoutActivity">
 
     <EditText
-        android:id="@+id/editTextEnterName"
+        android:id="@+id/editTextEnterNameq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter name"
@@ -23,7 +25,7 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/editTextEnterAge"
+        android:id="@+id/editTextEnterAgeq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter age "
@@ -39,7 +41,7 @@
         android:padding="15dp"
         android:textStyle="bold"/>
     <EditText
-        android:id="@+id/editTextEnterGender"
+        android:id="@+id/editTextEnterGenderq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter gender"
@@ -56,7 +58,7 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/editTextEnterPhone"
+        android:id="@+id/editTextEnterPhoneq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -72,9 +74,8 @@
         android:textSize="20dp"
         android:textStyle="bold"/>
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/buttonAddq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add"/>
-
 </LinearLayout>
