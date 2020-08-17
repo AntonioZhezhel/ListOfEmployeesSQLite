@@ -14,13 +14,13 @@ public class EmployeesModel {
     @ColumnInfo(name = "name")
     private String name;
     @ColumnInfo(name = "age")
-    private String age;
+    private int age;
     @ColumnInfo(name = "gender")
     private String gender;
     @ColumnInfo(name = "phone")
-    private String phone;
+    private long phone;
 
-    public EmployeesModel(String name, String age,String gender,String phone){
+    public EmployeesModel(String name, int age,String gender,long phone){
 
         this.name = name;
         this.age = age;
@@ -35,17 +35,17 @@ public class EmployeesModel {
         this.name = name;
     }
 
-    public String getPhone() {
+    public long getPhone() {
         return phone;
     }
-    public void setPhone(String phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

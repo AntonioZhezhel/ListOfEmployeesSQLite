@@ -21,6 +21,7 @@ import com.example.listofemployeessqlite.databinding.ActivityMainBinding;
 import com.example.listofemployeessqlite.persistence.EmployeesModel;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -59,7 +60,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainActivityV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding=getmViewDataBinding();
-
         binding.recyclerViewEmployees.setLayoutManager(new LinearLayoutManager(this));
 
         mainActivityVM.mEmployeesRepository.getAllEmployees().observe(this,articleModels -> {
@@ -105,8 +105,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainActivityV
             if (!TextUtils.isEmpty(editTextEnterName.getText()) && !TextUtils.isEmpty(editTextEnterAge.getText())
                     && !TextUtils.isEmpty(editTextEnterGender.getText()) && !TextUtils.isEmpty(editTextEnterPhone.getText())) {
 
-                EmployeesModel employeesModel=new EmployeesModel(editTextEnterName.getText().toString(),editTextEnterAge.getText().toString(),
-                        editTextEnterGender.getText().toString(),editTextEnterPhone.getText().toString());
+                EmployeesModel employeesModel=new EmployeesModel(editTextEnterName.getText().toString(),Integer.parseInt(editTextEnterAge.getText().toString()),
+                        editTextEnterGender.getText().toString(),Long.parseLong((editTextEnterPhone.getText().toString())));
                 mainActivityVM.mEmployeesRepository.insert(employeesModel);
                 alertDialog.dismiss();
             }else {
@@ -128,16 +128,16 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainActivityV
 
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == ADD_NOTE_REQUEST && resultCode == RESULT_OK){
+            assert data != null;
             String name = data.getStringExtra("name");
-            String age = data.getStringExtra("age");
+            int age = data.getIntExtra("age",  0);
             String gender = data.getStringExtra("gender");
-            String phone = data.getStringExtra("phone");
+            long phone = data.getLongExtra("phone",0);
 
             EmployeesModel employeesModel=new EmployeesModel(name,age,gender,phone);
             mainActivityVM.mEmployeesRepository.insert(employeesModel);

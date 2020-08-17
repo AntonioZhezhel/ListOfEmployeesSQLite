@@ -24,7 +24,7 @@ public class EmployeesLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emloyees_layout);
-    addNew();
+        addNew();
     }
 
     private void addNew() {
@@ -41,9 +41,9 @@ public class EmployeesLayoutActivity extends AppCompatActivity {
                     && !TextUtils.isEmpty(editTextEnterGender.getText()) && !TextUtils.isEmpty(editTextEnterPhone.getText())) {
 
                 String name = editTextEnterName.getText().toString();
-                String age = editTextEnterAge.getText().toString();
+                int age = Integer.parseInt(editTextEnterAge.getText().toString());
                 String gender = editTextEnterGender.getText().toString();
-                String phone = editTextEnterPhone.getText().toString();
+                long phone = Long.parseLong(editTextEnterPhone.getText().toString());
 
                 Intent data = new Intent();
                 data.putExtra("name",name);
@@ -53,10 +53,7 @@ public class EmployeesLayoutActivity extends AppCompatActivity {
 
                 setResult(RESULT_OK, data);
                 finish();
-
-
             }
-
         });
     }
 }

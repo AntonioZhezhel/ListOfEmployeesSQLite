@@ -54,7 +54,7 @@
             android:textColor="#000000"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:text="@{itemModel.age}"
+            android:text="@{String.valueOf(itemModel.age)}"
             />
 
         <TextView
@@ -68,7 +68,7 @@
             android:textColor="#000000"
             android:textSize="14dp"
             android:textStyle="bold"
-            android:text='@{itemModel.phone}'
+            android:text='@{String.valueOf(itemModel.phone)}'
             />
         <ImageView
             android:id="@+id/imageViewDeleteEmployees"

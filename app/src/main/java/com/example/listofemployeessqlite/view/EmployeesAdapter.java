@@ -28,7 +28,6 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.View
         this.employeesInteractionListener = employeesInteractionListener;
     }
 
-
     @NonNull
     @Override
     public EmployeesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -43,7 +42,6 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.View
         final EmployeesModel employeesModel = employeesModels.get(position);
         holder.bind(employeesModel);
     }
-
 
     @Override
     public int getItemCount() {
@@ -62,7 +60,6 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.View
         public void bind (EmployeesModel employeesModel){
 
             binding.setItemModel(employeesModel);
-
             binding.imageViewDeleteEmployees.setOnClickListener(v -> employeesInteractionListener.onEmployeesDeleted(employeesModel.getEmployeesId()));
 
         }
