@@ -40,22 +40,6 @@
         android:textColor="#2CB5F3"
         android:padding="15dp"
         android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/editTextEnterGenderq"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter gender"
-        android:textColorHint="#d0ced0"
-        android:layout_marginTop="24dp"
-        android:textSize="20dp"
-        android:inputType="text"
-        android:background="@drawable/brown_border"
-        android:maxLines="1"
-        android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="#2CB5F3"
-        android:padding="15dp"
-        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/editTextEnterPhoneq"
@@ -73,9 +57,47 @@
         android:textColorHint="#d0ced0"
         android:textSize="20dp"
         android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/editTextSelectGenderq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select gender"
+        android:textSize="20dp"
+        android:maxLines="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#d0ced0"
+        android:padding="15dp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGenderq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+        <RadioButton
+            android:id="@+id/radioButtonOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"/>
+    </RadioGroup>
+
     <Button
         android:id="@+id/buttonAddq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"/>
+        android:text="Add"
+        android:layout_marginTop="24dp"/>
 </LinearLayout>
