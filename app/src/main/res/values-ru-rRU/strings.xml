@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ListOfEmployeesSQLite</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_phone">Введите моб.номер</string>
+    <string name="select_gender">Укажите пол</string>
+    <string name="male">Мужчина</string>
+    <string name="female">Женшина</string>
+    <string name="others">Другое</string>
+    <string name="add">Добавить</string>
+    <string name="open">Добавить</string>
+    <string name="enter_gender">Введите пол</string>
+    <string name="enter_age">Введите возраст</string>
+    <string name="field_cant_be_empty">Поле не может быть пустым</string>
+
+</resources>

@@ -112,13 +112,13 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainActivityV
             }else {
 
                 if (TextUtils.isEmpty(editTextEnterName.getText()))
-                    editTextEnterName.setError("Field can't be empty");
+                    editTextEnterName.setError(getString(R.string.field_cant_be_empty));
                 if (TextUtils.isEmpty(editTextEnterAge.getText()))
-                    editTextEnterAge.setError("Field can't be empty");
+                    editTextEnterAge.setError(getString(R.string.field_cant_be_empty));
                 if (TextUtils.isEmpty(editTextEnterGender.getText()))
-                    editTextEnterGender.setError("Field can't be empty");
+                    editTextEnterGender.setError(getString(R.string.field_cant_be_empty));
                 if (TextUtils.isEmpty(editTextEnterPhone.getText()))
-                    editTextEnterPhone.setError("Field can't be empty");
+                    editTextEnterPhone.setError(getString(R.string.field_cant_be_empty));
             }
         });
 

@@ -10,7 +10,7 @@
         android:id="@+id/editTextEnterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter name"
+        android:hint="@string/enter_name"
         android:textColorHint="#d0ced0"
         android:textSize="20dp"
         android:inputType="text"
@@ -26,7 +26,7 @@
         android:id="@+id/editTextEnterAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter age "
+        android:hint="@string/enter_age"
         android:textColorHint="#d0ced0"
         android:layout_marginTop="24dp"
         android:textSize="20dp"
@@ -42,7 +42,7 @@
         android:id="@+id/editTextEnterGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter gender"
+        android:hint="@string/enter_gender"
         android:textColorHint="#d0ced0"
         android:layout_marginTop="24dp"
         android:textSize="20dp"
@@ -63,7 +63,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/brown_border"
-        android:hint="Enter phone"
+        android:hint="@string/enter_phone"
         android:inputType="number"
         android:maxLines="1"
         android:padding="15dp"
@@ -75,6 +75,6 @@
         android:id="@+id/buttonAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"/>
+        android:text="@string/add"/>
 
 </LinearLayout>

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ListOfEmployeesSQLite</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_phone">Enter phone</string>
+    <string name="select_gender">Select gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Other</string>
+    <string name="add">Add</string>
+    <string name="open">Open</string>
+    <string name="enter_gender">Enter Gender</string>
+    <string name="enter_age">Enter age</string>
+    <string name="field_cant_be_empty">Field can\'t be empty</string>
 </resources>
